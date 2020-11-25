@@ -17,31 +17,42 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneLayout;
 
-public class VentanaProductos extends JFrame {
-	int productoActual = 0;
-	int hastaProducto = 4;
-	JPanel panelCatalogo = new JPanel();
+import main.CargarMas;
+import main.Inicio;
 
-	private void cargarMas() {
+public class VentanaProductos extends JFrame {
+	
+	public static void verMas() {
+		hastaProducto += 5;
+		panelCatalogo.remove(verMas);
 		for (; productoActual <= hastaProducto; productoActual++) {
 			// actual.add(productos[productoActual].getImagen());
 			// actual.add(new JLabel("texto "+productoActual));
 			panelCatalogo.add(new JLabel("imagen " + productoActual));
 			panelCatalogo.add(new JLabel("texto " + productoActual));
-			validate();
+			//VentanaProductos.validate();
+			panelCatalogo.validate();
+			scroll.revalidate();
 		}
+		panelCatalogo.add(verMas);
 	}
+	
+	public static int productoActual = 0;
+	public static int hastaProducto = 0;
+	public static JPanel panelCatalogo = new JPanel();
+	public static JScrollPane scroll;
+	public static JButton verMas;
 
 	public VentanaProductos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Ventana Productos");
-		JScrollPane scroll = new JScrollPane(panelCatalogo);
+		scroll = new JScrollPane(panelCatalogo);
 		scroll.setLayout(new ScrollPaneLayout());
 		scroll.getVerticalScrollBar().setUnitIncrement(16);
 
 		panelCatalogo.setLayout(new GridLayout(0, 2));
 
-		JButton verMas = new JButton("Ver mas.");
+		verMas = new JButton("Ver mas.");
 
 		// Menú
 		JMenuBar barra = new JMenuBar();
@@ -59,15 +70,15 @@ public class VentanaProductos extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				VentanaPrincipal.ventana.dispose();
-				VentanaPrincipal.ventana=new VentanaRegistro();
+				Inicio.ventana.dispose();
+				Inicio.ventana=new VentanaRegistro();
 			}
 		});
 		iniciarSesion.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(VentanaPrincipal.ventana, VentanaPrincipal.usuarioYContraseña,"Iniciar sesión",JOptionPane.QUESTION_MESSAGE);
+				JOptionPane.showMessageDialog(Inicio.ventana, VentanaPrincipal.usuarioYContraseña,"Iniciar sesión",JOptionPane.QUESTION_MESSAGE);
 				barra.removeAll();
 				barra.add(miCuenta);
 				validate();
@@ -98,20 +109,17 @@ public class VentanaProductos extends JFrame {
 		miCuenta.add(cerrarSesion);
 		barra.add(iniciarSesion);
 		barra.add(registrarse);
-
-		cargarMas();
+		
 		panelCatalogo.add(verMas);
 
 		verMas.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				hastaProducto += 5;
-				panelCatalogo.remove(verMas);
-				cargarMas();
-				panelCatalogo.add(verMas);
+				verMas();
 			}
 		});
+		verMas();
 		pack();
 		setVisible(true);
 		setSize(800, 600);

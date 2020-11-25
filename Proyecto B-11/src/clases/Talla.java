@@ -2,7 +2,11 @@ package clases;
 
 public enum Talla {
 	
-	S("S",48,2),M("M",50,4),L("L",52,8),XL("XL",54,12),XXL("XXL",56,16);
+	S("S",48,2),
+	M("M",50,4),
+	L("L",52,8),
+	XL("XL",54,12),
+	XXL("XXL",56,16);
 	
 	 private final String letra;
 	    private final int numeroEU;
@@ -14,15 +18,15 @@ public enum Talla {
 	        this.numeroUSA=numeroUSA;
 	    }
 
-	    public String getLetra() {
+	    public String letra() {
 	        return letra;
 	    }
 
-	    public int getNumeroEU() {
+	    public int numeroEU() {
 	        return numeroEU;
 	    }
 	    
-	    public int getNumeroUSA() {
+	    public int numeroUSA() {
 	        return numeroUSA;
 	    }
 	}

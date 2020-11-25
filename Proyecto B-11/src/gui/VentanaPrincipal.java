@@ -1,17 +1,36 @@
 package gui;
 
 import javax.swing.*;
+
+import main.CambiarImagen;
+import main.Inicio;
+
 import java.awt.*;
 import java.awt.event.*;
 
 public class VentanaPrincipal extends JFrame {
-	public static JFrame ventana;
+	
 	public static JPanel usuarioYContraseña = new JPanel(new BorderLayout(5, 5));
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Ventana Principal");
 		setLayout(new GridLayout(2, 1));
+		Thread transicion=new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				while (true) {
+					try {
+						Thread.sleep(8000);
+						System.out.println("Cambio de imagen");
+					} catch (InterruptedException e) {
+						Thread.currentThread().interrupt();
+					}
 
+				}
+			}
+		});
+		transicion.start();
 		// Menú
 		JMenuBar barra = new JMenuBar();
 		JMenuItem registrarse = new JMenuItem("Registrarse");
@@ -39,15 +58,15 @@ public class VentanaPrincipal extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ventana.dispose();
-				ventana=new VentanaRegistro();
+				main.Inicio.ventana.dispose();
+				Inicio.ventana=new VentanaRegistro();
 			}
 		});
 		iniciarSesion.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(ventana, usuarioYContraseña,"Iniciar sesión",JOptionPane.QUESTION_MESSAGE);
+				JOptionPane.showMessageDialog(Inicio.ventana, usuarioYContraseña,"Iniciar sesión",JOptionPane.QUESTION_MESSAGE);
 				barra.removeAll();
 				barra.add(miCuenta);
 				validate();
@@ -70,8 +89,9 @@ public class VentanaPrincipal extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ventana.dispose();
-				ventana=new VentanaProductos();
+				Inicio.ventana.dispose();
+				transicion.interrupt();
+				Inicio.ventana=new VentanaProductos();
 			}
 		};
 		barra.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
@@ -118,18 +138,6 @@ public class VentanaPrincipal extends JFrame {
 		setSize(800, 600);
 
 	}
-	
-	public static void main(String[] args) {
 
-		SwingUtilities.invokeLater(new Runnable() {
-
-			@Override
-			public void run() {
-				ventana=new VentanaPrincipal();
-			}
-
-		});
-	}
-	
 
 }

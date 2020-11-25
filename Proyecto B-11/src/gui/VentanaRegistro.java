@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.Border;
 
+import main.Inicio;
+
 public class VentanaRegistro extends JFrame {
 
 	public VentanaRegistro() {
@@ -62,8 +64,8 @@ public class VentanaRegistro extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				VentanaPrincipal.ventana.dispose();
-				VentanaPrincipal.ventana=new VentanaPrincipal();
+				Inicio.ventana.dispose();
+				Inicio.ventana=new VentanaPrincipal();
 			}
 		});
 
