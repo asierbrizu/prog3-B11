@@ -2,76 +2,63 @@ package gui;
 
 import javax.swing.*;
 
+import bd.JDBC;
+import clases.Usuario;
 import main.CambiarImagen;
 import main.Inicio;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
 
 public class VentanaPrincipal extends JFrame {
-	
-	public static JPanel usuarioYContraseña = new JPanel(new BorderLayout(5, 5));
+
+	static Usuario usuario = null;
+
+	public static JMenuBar barra;
+	public static JMenuItem registrarse = new JMenuItem("Registrarse");
+	public static JMenuItem iniciarSesion = new JMenuItem("Iniciar sesión");
+	public static JMenu miCuenta = new JMenu("Mi cuenta");
+	public static JMenuItem perfil = new JMenuItem("Perfil");
+	public static JMenuItem pedidos = new JMenuItem("Pedidos");
+	public static JMenuItem deseados = new JMenuItem("Lista de deseados");
+	public static JMenuItem cerrarSesion = new JMenuItem("Cerrar sesión");
+
+	public static URL icono;
+	public static Image img;
+	public static Image resizedImage;
+	public static JButton boton1;
+	public static JPanel superior;
+
 	public VentanaPrincipal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Ventana Principal");
 		setLayout(new GridLayout(2, 1));
-		Thread transicion=new Thread(new Runnable() {
-			
-			@Override
-			public void run() {
-				while (true) {
-					try {
-						Thread.sleep(8000);
-						System.out.println("Cambio de imagen");
-					} catch (InterruptedException e) {
-						Thread.currentThread().interrupt();
-					}
 
-				}
-			}
-		});
+		Thread transicion = new CambiarImagen();
 		transicion.start();
 		// Menú
-		JMenuBar barra = new JMenuBar();
-		JMenuItem registrarse = new JMenuItem("Registrarse");
-		JMenuItem iniciarSesion = new JMenuItem("Iniciar sesión");
-		JMenu miCuenta = new JMenu("Mi cuenta");
-		JMenuItem perfil = new JMenuItem("Perfil");
-		JMenuItem pedidos = new JMenuItem("Pedidos");
-		JMenuItem deseados = new JMenuItem("Lista de deseados");
-		JMenuItem cerrarSesion = new JMenuItem("Cerrar sesión");
+		barra = new JMenuBar();
+		registrarse = new JMenuItem("Registrarse");
+		iniciarSesion = new JMenuItem("Iniciar sesión");
+		miCuenta = new JMenu("Mi cuenta");
+		perfil = new JMenuItem("Perfil");
+		pedidos = new JMenuItem("Pedidos");
+		deseados = new JMenuItem("Lista de deseados");
+		cerrarSesion = new JMenuItem("Cerrar sesión");
 
-		//Inicio sesión
-		
-	    JPanel label = new JPanel(new GridLayout(0, 1, 2, 2));
-	    label.add(new JLabel("Usuario", SwingConstants.RIGHT));
-	    label.add(new JLabel("Contraseña", SwingConstants.RIGHT));
-	    usuarioYContraseña.add(label, BorderLayout.WEST);
-	    JPanel controls = new JPanel(new GridLayout(0, 1, 2, 2));
-	    JTextField username = new JTextField();
-	    controls.add(username);
-	    JPasswordField password = new JPasswordField();
-	    controls.add(password);
-	    usuarioYContraseña.add(controls, BorderLayout.CENTER);
-		
 		registrarse.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				main.Inicio.ventana.dispose();
-				Inicio.ventana=new VentanaRegistro();
+				IniciarSesion.registrar();
 			}
 		});
 		iniciarSesion.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(Inicio.ventana, usuarioYContraseña,"Iniciar sesión",JOptionPane.QUESTION_MESSAGE);
-				barra.removeAll();
-				barra.add(miCuenta);
-				validate();
-				repaint();
-				
+				IniciarSesion.iniciar("");
 			}
 		});
 		cerrarSesion.addActionListener(new ActionListener() {
@@ -81,17 +68,17 @@ public class VentanaPrincipal extends JFrame {
 				barra.removeAll();
 				barra.add(iniciarSesion);
 				barra.add(registrarse);
-				validate();
-				repaint();
+				Inicio.ventana.validate();
+				Inicio.ventana.repaint();
 			}
 		});
-		ActionListener abrirProductos=new ActionListener() {
-			
+		ActionListener abrirProductos = new ActionListener() {
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Inicio.ventana.dispose();
 				transicion.interrupt();
-				Inicio.ventana=new VentanaProductos();
+				Inicio.ventana = new VentanaProductos();
 			}
 		};
 		barra.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
@@ -107,29 +94,27 @@ public class VentanaPrincipal extends JFrame {
 		barra.add(iniciarSesion);
 		barra.add(registrarse);
 
-		JPanel superior = new JPanel();
+		superior = new JPanel();
 		JPanel inferiores = new JPanel();
 		JPanel izquierdo = new JPanel();
 		JPanel derecho = new JPanel();
 		JLabel titulo = new JLabel("Destacados/Ofertas");
 
-		//superior.setBorder(BorderFactory.createEmptyBorder(50, 20, 20, 20));
-
 		inferiores.setLayout(new GridLayout(1, 2));
 
-		
-		Image img = new ImageIcon("img/deusto.jpg").getImage();
-		Image resizedImage = img.getScaledInstance(350, 350, java.awt.Image.SCALE_SMOOTH);
-		JButton boton1=new JButton(new ImageIcon(resizedImage));
-		JButton boton2=new JButton(new ImageIcon(resizedImage));
-		JButton boton3=new JButton(new ImageIcon(resizedImage));
+		img = new ImageIcon("recursos/img/deusto.jpg").getImage();
+		resizedImage = img.getScaledInstance(250, 250, java.awt.Image.SCALE_SMOOTH);
+
+		boton1 = new JButton(new ImageIcon(resizedImage));
+		JButton boton2 = new JButton(new ImageIcon(resizedImage));
+		JButton boton3 = new JButton("Productos");
 		boton1.addActionListener(abrirProductos);
 		boton2.addActionListener(abrirProductos);
 		boton3.addActionListener(abrirProductos);
 		superior.add(boton1);
 		izquierdo.add(boton2);
 		derecho.add(boton3);
-		inferiores.add(izquierdo);
+		// inferiores.add(izquierdo);
 		inferiores.add(derecho);
 		add(superior);
 		add(inferiores);
@@ -138,6 +123,5 @@ public class VentanaPrincipal extends JFrame {
 		setSize(800, 600);
 
 	}
-
 
 }

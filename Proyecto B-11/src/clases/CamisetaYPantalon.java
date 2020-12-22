@@ -1,15 +1,17 @@
 package clases;
 
-public class CamisetaYPantalon extends Producto{
+public class CamisetaYPantalon extends Producto {
 
 	private Talla talla;
 	private String material;
-	
-	public CamisetaYPantalon(String nombre, double precio, double descuento, String color, String imagen, Talla talla,
-			String material) {
-		super(nombre, precio, descuento, color,imagen);
+	private boolean esCamiseta;
+
+	public CamisetaYPantalon(int id, String nombre, double precio, double descuento, String color, String imagen,
+			boolean estaDescatalogado, Talla talla, String material, boolean esCamiseta) {
+		super(id, nombre, precio, descuento, color, imagen, estaDescatalogado);
 		this.talla = talla;
 		this.material = material;
+		this.esCamiseta = esCamiseta;
 	}
 
 	public Talla getTalla() {
@@ -28,11 +30,17 @@ public class CamisetaYPantalon extends Producto{
 		this.material = material;
 	}
 
+	public boolean isEsCamiseta() {
+		return esCamiseta;
+	}
+
+	public void setEsCamiseta(boolean esCamiseta) {
+		this.esCamiseta = esCamiseta;
+	}
+
 	@Override
 	public String toString() {
-		return "CamisetaYPantalon [talla=" + talla + ", material=" + material + "]";
+		return "CamisetaYPantalon [talla=" + talla + ", material=" + material + ", esCamiseta=" + esCamiseta + "]";
 	}
-	
-	
-	
+
 }

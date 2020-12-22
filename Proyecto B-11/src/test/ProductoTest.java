@@ -19,9 +19,9 @@ public class ProductoTest {
 	
 	@Before
 	public void setUp() {
-		producto1 = new CamisetaYPantalon("Camiseta Adidas",25.0,1.0,"Negro","img/camiAdidas",Talla.L,"Poliester");
-		producto2 = new Zapato("Sandalias",7.2,0.85,"Marron","img/sandalias",38,"Blanda",true);
-		producto3 = new Producto("Gorro de Santa Claus",7.1,0.5,"Rojo","img/santa");
+		producto1 = new CamisetaYPantalon(1,"Camiseta Adidas",25.0,1.0,"Negro","img/camiAdidas",false,Talla.L,"Poliester",true);
+		producto2 = new Zapato(2,"Sandalias",7.2,0.85,"Marron","img/sandalias",false,38,"Blanda",true);
+		producto3 = new Producto(3,"Gorro de Santa Claus",7.1,0.5,"Rojo","img/santa",false);
 	}
 	
 	@Test

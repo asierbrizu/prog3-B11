@@ -14,7 +14,6 @@ import clases.Talla;
 import clases.Usuario;
 import clases.Zapato;
 
-
 public class UsuarioTest {
 
 	Usuario usuario1;
@@ -23,28 +22,29 @@ public class UsuarioTest {
 	Producto producto1;
 	Producto producto2;
 	Producto producto3;
-	
+
 	@Before
 	public void setUp() {
-		usuario1 = new Usuario("asierbrizu@opendeusto.es","ContraseñaFalsa1",new HashSet<Pedido>());
-		usuario2 = new Usuario("miguelgarcia@outlook.com","EstaTampocoExiste2", new HashSet<Pedido>());
-		usuario3 = new Usuario("alvaroalvarez@gmail.com","OroParecePlatanoEs",new HashSet<Pedido>());
-		
-		producto1 = new CamisetaYPantalon("Camiseta Adidas",25.0,1.0,"Negro","img/camiAdidas",Talla.L,"Poliester");
-		producto2 = new Zapato("Sandalias",7.2,0.85,"Marron","img/sandalias",38,"Blanda",true);
-		producto3 = new Producto("Gorro de Santa Claus",7.1,0.5,"Rojo","img/santa");
-		
+		usuario1 = new Usuario("asierbrizu@opendeusto.es", "ContraseñaFalsa1", new HashSet<Pedido>());
+		usuario2 = new Usuario("miguelgarcia@outlook.com", "EstaTampocoExiste2", new HashSet<Pedido>());
+		usuario3 = new Usuario("alvaroalvarez@gmail.com", "OroParecePlatanoEs", new HashSet<Pedido>());
+
+		producto1 = new CamisetaYPantalon(1, "Camiseta Adidas", 25.0, 1.0, "Negro", "img/camiAdidas", false, Talla.L,
+				"Poliester", true);
+		producto2 = new Zapato(2, "Sandalias", 7.2, 0.85, "Marron", "img/sandalias", false, 38, "Blanda", true);
+		producto3 = new Producto(3, "Gorro de Santa Claus", 7.1, 0.5, "Rojo", "img/santa", false);
+
 		usuario1.getCesta().add(producto1);
 		usuario1.getCesta().add(producto3);
 	}
-	
+
 	@Test
 	public void testCorreo() {
 		assertEquals("asierbrizu@opendeusto.es", usuario1.getCorreo());
 		assertEquals("miguelgarcia@outlook.com", usuario2.getCorreo());
 		assertEquals("alvaroalvarez@gmail.com", usuario3.getCorreo());
 	}
-	
+
 	@Test
 	public void testCesta() {
 		assertTrue(usuario1.getCesta().contains(producto1));
@@ -56,6 +56,5 @@ public class UsuarioTest {
 		assertFalse(usuario1.getCesta().contains(producto1));
 		assertTrue(usuario3.getCesta().contains(producto3));
 	}
-	
-	
+
 }
