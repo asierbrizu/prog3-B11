@@ -18,15 +18,15 @@ import gui.Seleccionar;
 import gui.VentanaPrincipal;
 
 public class Inicio {
-	public static Map<String, Usuario> mapaUsuario = new HashMap<String, Usuario>();
 	public static Map<String, Producto> mapaProducto = new HashMap<String, Producto>();
-	public static Usuario usuarioIniciado = null;
+	public static String usuarioIniciado = "";
 	public static JFrame ventana;
 	public static Thread cargarMas;
-	public static Set<CamisetaYPantalon> camisetasYPantalones = new HashSet<CamisetaYPantalon>();
-	public static Set<Zapato> zapatos = new HashSet<Zapato>();
+	public static Set<Producto> camisetasYPantalones = new HashSet<Producto>();
+	public static Set<Producto> zapatos = new HashSet<Producto>();
 	public static Set<Usuario> usuarios = new HashSet<Usuario>();
-
+	public static boolean esVentanaDeseados=false;
+	
 	public static void main(String[] args) {
 
 		JDBC.importar();

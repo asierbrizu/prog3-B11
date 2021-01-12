@@ -71,6 +71,19 @@ public class JDBC {
 		}
 	}
 
+	/*public static Usuario getUsuario(String correo) {
+		try {
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:tienda.db");
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM usuario WHERE correo=?");
+			stmt.setString(1, correo);
+			ResultSet rs = stmt.executeQuery();
+			while(rs.next()) {
+				return new
+			}
+		} catch (SQLException e) {
+		}
+	}
+*/
 	public static boolean comprobarUsuario(String correo) {
 		boolean existe = false;
 		try {
@@ -110,7 +123,7 @@ public class JDBC {
 		}
 		return coincide;
 	}
-
+/*
 	public static void cargarUsuarios() {
 
 		try {
@@ -130,7 +143,7 @@ public class JDBC {
 		}
 
 	}
-
+*/
 	public static void crearUsuario(String usu, String contra) {
 
 		try {
@@ -148,7 +161,7 @@ public class JDBC {
 				stmt.execute();
 				Usuario usuario = new Usuario(usu, contra);
 				Inicio.usuarios.add(usuario);
-				Inicio.mapaUsuario.put(usuario.getCorreo(), usuario);
+				//Inicio.mapaUsuario.put(usuario.getCorreo(), usuario);
 			} else {
 				JOptionPane.showMessageDialog(Inicio.ventana, "Usuario ya existe", "El usuario ya existe",
 						JOptionPane.ERROR_MESSAGE);
@@ -161,15 +174,15 @@ public class JDBC {
 
 	}
 
-	public static boolean loDesea(Usuario usu, String id) {
+	public static boolean loDesea(String usu, String id) {
 		boolean desea = false;
 		try {
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:tienda.db");
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM deseados WHERE correo=?;");
-			stmt.setString(1, usu.getCorreo());
+			stmt.setString(1, usu);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				if (rs.getString("idCamiseta").isEmpty()) {
+				if (rs.getString("idCamiseta")==null) {
 					if (rs.getString("idZapatos").equals(id)) {
 						desea = true;
 					}
@@ -179,26 +192,70 @@ public class JDBC {
 					}
 				}
 			}
+			conn.close();
 		} catch (SQLException e) {
 			System.out.println("Error de SQL");
 		}
 		return desea;
 	}
 
-	public static ArrayList<Producto> productosDeseados(Usuario usuario) {
+	public static void anyadirDeseado(String usu, String id) {
+		try {
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:tienda.db");
+			PreparedStatement stmt = conn.prepareStatement("INSERT INTO deseados VALUES(?,?,?)");
+			if (Inicio.mapaProducto.get(id) instanceof CamisetaYPantalon) {
+				stmt.setString(1, id);
+				stmt.setString(3, usu);
+
+			} else {
+				stmt.setString(2, id);
+				stmt.setString(3, usu);
+
+			}
+			
+			stmt.execute();
+			conn.close();
+		} catch (SQLException e) {
+			System.out.println("Error de SQL");
+		}
+	}
+	
+	public static void eliminarDeseados(String usu, String id) {
+		try {
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:tienda.db");
+			PreparedStatement stmt;
+			
+			if (Inicio.mapaProducto.get(id) instanceof CamisetaYPantalon) {		
+				stmt = conn.prepareStatement("DELETE FROM deseados WHERE correo=? AND idCamiseta=?");
+				
+			} else {
+				stmt = conn.prepareStatement("DELETE FROM deseados WHERE correo=? AND idZapatos=?");
+				
+			}
+			stmt.setString(1, usu);
+			stmt.setString(2, id);
+			stmt.execute();
+			conn.close();
+		} catch (SQLException e) {
+			System.out.println("Error de SQL");
+		}
+	}
+
+	public static ArrayList<Producto> productosDeseados(String usuario) {
 		ArrayList<Producto> productos = new ArrayList<Producto>();
 		try {
 			Connection conn = DriverManager.getConnection("jdbc:sqlite:tienda.db");
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM deseados WHERE correo=?;");
-			stmt.setString(1, usuario.getCorreo());
+			stmt.setString(1, usuario);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
-				if (rs.getString("idCamiseta").isEmpty()) {
-					productos.add(Inicio.mapaProducto.get(rs.getInt("idZapatos")));
+				if (rs.getString("idCamiseta")==null) {
+					productos.add(Inicio.mapaProducto.get(String.valueOf(rs.getInt("idZapatos"))));
 				} else {
-					productos.add(Inicio.mapaProducto.get(rs.getInt("idCamiseta")));
-				}
+					productos.add(Inicio.mapaProducto.get(String.valueOf(rs.getInt("idCamiseta"))));
+					}
 			}
+			conn.close();
 		} catch (SQLException e) {
 			System.out.println("Error de SQL");
 		}

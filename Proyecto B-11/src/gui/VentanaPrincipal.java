@@ -3,82 +3,129 @@ package gui;
 import javax.swing.*;
 
 import bd.JDBC;
+import clases.Producto;
 import clases.Usuario;
 import main.CambiarImagen;
+import main.CargarMas;
 import main.Inicio;
 
 import java.awt.*;
 import java.awt.event.*;
 import java.net.URL;
+import java.util.HashSet;
+import java.util.Set;
 
 public class VentanaPrincipal extends JFrame {
 
 	static Usuario usuario = null;
 
-	public static JMenuBar barra;
+	public static JMenuBar barra=new JMenuBar();
 	public static JMenuItem registrarse = new JMenuItem("Registrarse");
 	public static JMenuItem iniciarSesion = new JMenuItem("Iniciar sesión");
+	public static JMenuItem inicio=new JMenuItem("Inicio");
 	public static JMenu miCuenta = new JMenu("Mi cuenta");
 	public static JMenuItem perfil = new JMenuItem("Perfil");
 	public static JMenuItem pedidos = new JMenuItem("Pedidos");
 	public static JMenuItem deseados = new JMenuItem("Lista de deseados");
 	public static JMenuItem cerrarSesion = new JMenuItem("Cerrar sesión");
-
+	public static Thread transicion = new CambiarImagen();
 	public static URL icono;
 	public static Image img;
 	public static Image resizedImage;
-	public static JButton boton1;
+	public static JButton bProd;
 	public static JPanel superior;
 
 	public VentanaPrincipal() {
+		Inicio.esVentanaDeseados=false;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Ventana Principal");
 		setLayout(new GridLayout(2, 1));
-
-		Thread transicion = new CambiarImagen();
+		transicion=new CambiarImagen();
 		transicion.start();
-		// Menú
-		barra = new JMenuBar();
-		registrarse = new JMenuItem("Registrarse");
-		iniciarSesion = new JMenuItem("Iniciar sesión");
-		miCuenta = new JMenu("Mi cuenta");
-		perfil = new JMenuItem("Perfil");
-		pedidos = new JMenuItem("Pedidos");
-		deseados = new JMenuItem("Lista de deseados");
-		cerrarSesion = new JMenuItem("Cerrar sesión");
+		if (registrarse.getActionListeners().length==0) {
+			registrarse.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					IniciarSesion.registrar();
+				}
+			});
+		}
+		if (iniciarSesion.getActionListeners().length==0) {
+			iniciarSesion.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					IniciarSesion.iniciar("");
+					Inicio.esVentanaDeseados=false;
+					Inicio.ventana.dispose();
+					transicion.interrupt();
+					Inicio.ventana=new VentanaPrincipal();
+				}
+			});
+		}
+		if (cerrarSesion.getActionListeners().length==0) {
+			cerrarSesion.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					barra.removeAll();
+					barra.add(iniciarSesion);
+					barra.add(registrarse);
+					barra.add(inicio);
+					Inicio.ventana.validate();
+					Inicio.ventana.repaint();
+					Inicio.usuarioIniciado = "";
+					Inicio.esVentanaDeseados=false;
+					Inicio.ventana.dispose();
+					transicion.interrupt();
+					Inicio.ventana=new VentanaPrincipal();
+				}
+			});
+		}
+		if(inicio.getActionListeners().length==0) {
+			inicio.addActionListener(new ActionListener() {		
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					Inicio.esVentanaDeseados=false;
+					Inicio.ventana.dispose();
+					transicion.interrupt();
+					Inicio.ventana=new VentanaPrincipal();
+				}
+			});
+		}
 
-		registrarse.addActionListener(new ActionListener() {
+		if(deseados.getActionListeners().length==0) {
+			deseados.addActionListener(new ActionListener() {		
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					if (!JDBC.productosDeseados(Inicio.usuarioIniciado).isEmpty()) {
+						Inicio.esVentanaDeseados = true;
+						transicion.interrupt();
+						Inicio.ventana.dispose();
+						Inicio.ventana = new VentanaProductos(
+								new HashSet<Producto>(JDBC.productosDeseados(Inicio.usuarioIniciado)));
+					} else {
+						JOptionPane.showMessageDialog(Inicio.ventana, "No hay productos deseados", "No hay productos que mostrar",
+								JOptionPane.INFORMATION_MESSAGE);
+					}
+				}
+			});
+		}
+		
+		ActionListener abrirCamisetas = new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				IniciarSesion.registrar();
-			}
-		});
-		iniciarSesion.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				IniciarSesion.iniciar("");
-			}
-		});
-		cerrarSesion.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				barra.removeAll();
-				barra.add(iniciarSesion);
-				barra.add(registrarse);
-				Inicio.ventana.validate();
-				Inicio.ventana.repaint();
-			}
-		});
-		ActionListener abrirProductos = new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Inicio.ventana.dispose();
 				transicion.interrupt();
-				Inicio.ventana = new VentanaProductos();
+				Inicio.ventana.dispose();
+				Inicio.ventana = new VentanaProductos(Inicio.camisetasYPantalones);
+			}
+		};
+		ActionListener abrirZapatos= new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				transicion.interrupt();
+				Inicio.ventana.dispose();
+				Inicio.ventana = new VentanaProductos(Inicio.zapatos);
 			}
 		};
 		barra.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
@@ -91,9 +138,15 @@ public class VentanaPrincipal extends JFrame {
 		miCuenta.add(pedidos);
 		miCuenta.add(deseados);
 		miCuenta.add(cerrarSesion);
-		barra.add(iniciarSesion);
-		barra.add(registrarse);
-
+		if(Inicio.usuarioIniciado=="") {
+			barra.add(iniciarSesion);
+			barra.add(registrarse);
+				
+		}else {
+			barra.add(miCuenta);
+		}
+		barra.add(inicio);
+		
 		superior = new JPanel();
 		JPanel inferiores = new JPanel();
 		JPanel izquierdo = new JPanel();
@@ -102,26 +155,31 @@ public class VentanaPrincipal extends JFrame {
 
 		inferiores.setLayout(new GridLayout(1, 2));
 
-		img = new ImageIcon("recursos/img/deusto.jpg").getImage();
+		img = new ImageIcon("recursos/img/anciano.png").getImage();
 		resizedImage = img.getScaledInstance(250, 250, java.awt.Image.SCALE_SMOOTH);
 
-		boton1 = new JButton(new ImageIcon(resizedImage));
-		JButton boton2 = new JButton(new ImageIcon(resizedImage));
-		JButton boton3 = new JButton("Productos");
-		boton1.addActionListener(abrirProductos);
-		boton2.addActionListener(abrirProductos);
-		boton3.addActionListener(abrirProductos);
-		superior.add(boton1);
-		izquierdo.add(boton2);
-		derecho.add(boton3);
-		// inferiores.add(izquierdo);
+		bProd = new JButton(new ImageIcon(resizedImage));
+		bProd.setName("1");
+		JButton bCamiseta = new JButton("Camisetas");
+		JButton bZapato = new JButton("Zapatos");
+		bProd.addActionListener(new ActionListener() {		
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Seleccionar.mostrar(Inicio.usuarioIniciado, Inicio.mapaProducto.get(VentanaPrincipal.bProd.getName()));
+			}
+		});
+		bCamiseta.addActionListener(abrirCamisetas);
+		bZapato.addActionListener(abrirZapatos);
+		superior.add(bProd);
+		izquierdo.add(bCamiseta);
+		derecho.add(bZapato);
+		inferiores.add(izquierdo);
 		inferiores.add(derecho);
 		add(superior);
 		add(inferiores);
 
 		setVisible(true);
-		setSize(800, 600);
-
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
 	}
 
 }

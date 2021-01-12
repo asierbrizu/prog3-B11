@@ -43,12 +43,20 @@ public class IniciarSesion {
 			if (!username.getText().equals("")) {
 				if (JDBC.comprobarUsuario(username.getText())) {
 					if (JDBC.comprobarContrasenya(username.getText(), password.getText())) {
-						Inicio.usuarioIniciado = Inicio.mapaUsuario.get(username.getText());
+						Inicio.usuarioIniciado = username.getText();
 						VentanaPrincipal.barra.removeAll();
 						VentanaPrincipal.barra.add(VentanaPrincipal.miCuenta);
+						VentanaPrincipal.barra.add(VentanaPrincipal.inicio);
 						Inicio.ventana.validate();
 						Inicio.ventana.repaint();
-
+						CambiarImagen.productosDeseados = JDBC.productosDeseados(Inicio.usuarioIniciado);
+						CambiarImagen.productos.clear();
+						for (int i = 0; i < CambiarImagen.productosDeseados.size(); i++) {
+							if (!CambiarImagen.productosDeseados.get(i).isDescatalogado()) {
+								CambiarImagen.productos.add(CambiarImagen.productosDeseados.get(i));
+							}
+						}
+						CambiarImagen.actual=0;
 					} else {
 						JOptionPane.showMessageDialog(Inicio.ventana, "Contraseña incorrecta", "Contraseña incorrecta",
 								JOptionPane.ERROR_MESSAGE);
@@ -66,6 +74,7 @@ public class IniciarSesion {
 				iniciar(username.getText());
 			}
 		}
+		
 	}
 
 	public static void registrar() {
@@ -98,10 +107,12 @@ public class IniciarSesion {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				String contra=new String(tContrasenya.getPassword());
+				String confirmar=new String(tConfirmar.getPassword());
 				if (tCorreo.getText().length() <= 30 && tCorreo.getText().trim().length() > 0) {
-					if (tContrasenya.getText().length() <= 50 && tContrasenya.getText().trim().length() > 0) {
-						if (tConfirmar.getText().equals(tContrasenya.getText())) {
-							JDBC.crearUsuario(tCorreo.getText(), tContrasenya.getText());
+					if (contra.length() <= 50 && contra.trim().length()>0) {
+						if (contra.equals(confirmar)) {
+							JDBC.crearUsuario(tCorreo.getText(), contra);
 							Inicio.ventana.dispose();
 							Inicio.ventana = new VentanaPrincipal();
 						} else {
