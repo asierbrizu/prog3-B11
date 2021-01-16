@@ -43,4 +43,15 @@ public class CamisetaYPantalon extends Producto {
 		return "CamisetaYPantalon [talla=" + talla + ", material=" + material + ", esCamiseta=" + esCamiseta + "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof CamisetaYPantalon) {
+			if (((CamisetaYPantalon) obj).getNombre().equals(this.getNombre())
+					&& ((CamisetaYPantalon) obj).getTalla().toString().equals(this.getTalla().toString())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

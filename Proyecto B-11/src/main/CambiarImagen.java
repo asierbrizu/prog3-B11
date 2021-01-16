@@ -1,18 +1,14 @@
 package main;
 
 import java.awt.Image;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-
 import bd.JDBC;
 import clases.Producto;
 import gui.Seleccionar;
@@ -23,10 +19,11 @@ public class CambiarImagen extends Thread {
 	public static ArrayList<Producto> productos = new ArrayList<Producto>();
 	public static List<Producto> productosDeseados;
 	public static List<Producto> todosLosProductos;
+
 	@Override
 	public void run() {
-		
-		if (Inicio.usuarioIniciado != ""&&!JDBC.productosDeseados(Inicio.usuarioIniciado).isEmpty()) {
+
+		if (Inicio.usuarioIniciado != "" && !JDBC.productosDeseados(Inicio.usuarioIniciado).isEmpty()) {
 			productosDeseados = JDBC.productosDeseados(Inicio.usuarioIniciado);
 			for (int i = 0; i < productosDeseados.size(); i++) {
 				if (!productosDeseados.get(i).isDescatalogado()) {
@@ -44,24 +41,34 @@ public class CambiarImagen extends Thread {
 
 		}
 
-		while (true) {
+		while (!VentanaPrincipal.transicion.isInterrupted()) {
 			int maximo = productos.size();
 			if (actual == maximo) {
 				actual = 0;
 			}
+
 			try {
-				Thread.sleep(3000);
-				String ruta = "/" + Inicio.mapaProducto.get(String.valueOf(productos.get(actual).getId())).getImagen();
+
+				try {
+					Thread.sleep(Integer.valueOf(Inicio.milisegundos));
+				} catch (Exception e) {
+					Thread.sleep(5000);
+
+				}
+
+				String ruta = Inicio.imagenes
+						+ Inicio.mapaProducto.get(String.valueOf(productos.get(actual).getId())).getImagen();
 
 				URL icono = Inicio.ventana.getClass().getResource(ruta);
 				Image img = new ImageIcon(icono).getImage();
 				Image resizedImage = img.getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH);
 				VentanaPrincipal.bProd = new JButton(new ImageIcon(resizedImage));
 				VentanaPrincipal.bProd.setName(String.valueOf(productos.get(actual).getId()));
-				VentanaPrincipal.bProd.addActionListener(new ActionListener() {		
+				VentanaPrincipal.bProd.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						Seleccionar.mostrar(Inicio.usuarioIniciado, Inicio.mapaProducto.get(VentanaPrincipal.bProd.getName()));
+						Seleccionar.mostrar(Inicio.usuarioIniciado,
+								Inicio.mapaProducto.get(VentanaPrincipal.bProd.getName()));
 					}
 				});
 				VentanaPrincipal.superior.removeAll();
@@ -70,11 +77,13 @@ public class CambiarImagen extends Thread {
 				Inicio.ventana.validate();
 				Inicio.ventana.repaint();
 				actual += 1;
+
 			} catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
 			} catch (NullPointerException n) {
+				Inicio.logger.severe("Error al cambiar la imagen de la pagina principal.");
 			}
-					}
+		}
 	}
 
 }

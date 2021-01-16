@@ -1,0 +1,598 @@
+ene 16, 2021 3:25:22 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:25:22 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:25:22 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:25:33 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:25:33 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:25:33 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:25:37 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:25:37 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:25:37 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:37:00 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:37:00 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:37:00 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:39:39 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:39:39 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:39:40 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:41:36 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:41:36 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:41:36 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:42:09 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:42:10 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:42:10 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:54:18 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:54:18 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:54:18 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:54:27 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 3:54:35 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:54:35 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:54:35 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:54:44 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 3:54:52 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 3:56:04 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:56:05 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:56:05 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:56:52 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:56:52 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:56:52 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:57:44 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:57:44 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:57:44 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:58:35 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:58:35 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:58:35 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:58:45 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 3:58:45 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 3:58:45 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 3:58:53 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 3:59:07 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 3:59:10 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 9 cargado.
+ene 16, 2021 3:59:10 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 9 cargado.
+ene 16, 2021 4:00:36 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:00:36 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:00:36 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:00:45 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:00:53 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:01:00 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:01:00 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:01:00 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:01:09 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:03:15 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:03:15 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:03:15 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:03:23 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:03:59 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:04:00 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:04:00 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:04:08 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:04:16 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:04:43 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:04:44 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:04:44 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:04:52 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:05:28 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:05:28 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:05:28 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:05:36 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:06:01 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:06:02 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:06:02 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:06:10 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:06:18 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:06:26 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:06:35 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:06:35 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:06:35 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:06:57 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:06:58 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:06:58 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:07:11 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:07:40 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:07:40 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:07:40 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:08:16 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:08:16 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:08:16 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:08:25 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:10:11 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:10:11 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:10:11 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:11:33 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:11:33 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:11:34 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:11:42 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:11:50 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:11:58 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 4:12:02 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:12:02 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:12:02 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:14:07 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:14:07 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:14:07 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:14:19 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Pantalones vaqueros añadido a la cesta.
+ene 16, 2021 4:14:19 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:14:24 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:14:29 PM bd.JDBC anyadirDeseado
+INFORMACIÓN: Producto ID:1 añadida a la lista de deseados de a.
+ene 16, 2021 4:14:29 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:14:49 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:14:49 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:14:49 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:15:10 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:15:15 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:15:36 PM gui.VentanaPrincipal$3 actionPerformed
+INFORMACIÓN: Sesión cerrada.
+ene 16, 2021 4:15:41 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:15:49 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:15:54 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:15:57 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 8 cargado.
+ene 16, 2021 4:15:57 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 8 cargado.
+ene 16, 2021 4:16:00 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 9 cargado.
+ene 16, 2021 4:16:00 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 9 cargado.
+ene 16, 2021 4:16:00 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:16:01 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 10 cargado.
+ene 16, 2021 4:16:01 PM gui.VentanaPedidos$1 valueChanged
+INFORMACIÓN: Pedido 10 cargado.
+ene 16, 2021 4:16:12 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:16:12 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:16:12 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:16:33 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 4:16:42 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:17:02 PM main.CambiarImagen run
+INFORMACIÓN: No se ha podido cargar la cantidad de segundos del fichero de configuración.
+ene 16, 2021 4:18:43 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:18:43 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:18:43 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:25:33 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:25:33 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:25:33 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:25:44 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:25:48 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:25:50 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 14 tramitado.
+ene 16, 2021 4:28:26 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:28:27 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:28:27 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:28:33 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:28:39 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Rutina diaria añadido a la cesta.
+ene 16, 2021 4:28:43 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 15 tramitado.
+ene 16, 2021 4:41:17 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:41:18 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:41:18 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:41:27 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:41:33 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Por que gafas? añadido a la cesta.
+ene 16, 2021 4:41:37 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Pantalones de campana añadido a la cesta.
+ene 16, 2021 4:41:46 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 4:41:52 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 4:41:56 PM bd.JDBC obtenerProducto
+GRAVE: Error al intentar obtener el producto 16.
+ene 16, 2021 4:41:59 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 4:42:16 PM bd.JDBC obtenerProducto
+GRAVE: Error al intentar obtener el producto 17.
+ene 16, 2021 4:42:19 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 4:43:56 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:43:56 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:43:56 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:44:04 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:44:31 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:44:34 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 4:44:38 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Tacones añadido a la cesta.
+ene 16, 2021 4:44:46 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 4:48:31 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:48:31 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:48:31 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:48:35 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:48:37 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 4:48:41 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:48:46 PM bd.JDBC obtenerProducto
+GRAVE: Error al intentar obtener el producto 19.
+ene 16, 2021 4:48:46 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 19 tramitado.
+ene 16, 2021 4:52:05 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:52:05 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:52:05 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:52:08 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:52:11 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 4:52:17 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:52:21 PM bd.JDBC obtenerProducto
+GRAVE: Error al intentar obtener el producto 20.
+ene 16, 2021 4:52:24 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 4:54:18 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:54:18 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:54:18 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:54:22 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:54:26 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:54:26 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:54:26 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:54:30 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:54:32 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 4:54:35 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:54:42 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 4:56:57 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 4:56:58 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 4:56:58 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 4:57:00 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 4:57:06 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Tacones añadido a la cesta.
+ene 16, 2021 4:57:09 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 4:57:12 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 22 tramitado.
+ene 16, 2021 5:05:37 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:05:37 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:05:37 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:05:40 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 5:05:42 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 5:05:45 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 5:05:47 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 5:06:20 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:06:21 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:06:21 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:06:23 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 5:06:25 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 5:06:27 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 5:06:29 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 5:11:50 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:11:50 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:11:50 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:11:53 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 5:11:55 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 5:12:00 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 5:12:03 PM bd.JDBC tramitarPedido
+GRAVE: Error al tramitar el pedido.
+ene 16, 2021 5:16:52 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:16:52 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:16:52 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:21:05 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:21:05 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:21:05 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:21:26 PM gui.IniciarSesion iniciar
+INFORMACIÓN: asierbrizu@opendeusto.es ha iniciado sesión.
+ene 16, 2021 5:21:39 PM bd.JDBC eliminarDeseados
+INFORMACIÓN: Producto ID:10 eliminado de la lista de deseados de asierbrizu@opendeusto.es.
+ene 16, 2021 5:21:55 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Rutina diaria añadido a la cesta.
+ene 16, 2021 5:21:59 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 5:22:03 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 5:22:07 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 8 tramitado.
+ene 16, 2021 5:22:51 PM gui.VentanaPrincipal$3 actionPerformed
+INFORMACIÓN: Sesión cerrada.
+ene 16, 2021 5:22:57 PM gui.IniciarSesion iniciar
+INFORMACIÓN: easter ha iniciado sesión.
+ene 16, 2021 5:23:11 PM gui.VentanaPrincipal$3 actionPerformed
+INFORMACIÓN: Sesión cerrada.
+ene 16, 2021 5:23:29 PM gui.IniciarSesion iniciar
+INFORMACIÓN: asierbrizuela@opendeusto.es ha iniciado sesión.
+ene 16, 2021 5:35:49 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:35:49 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:35:49 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:36:13 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:36:14 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:36:14 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:38:19 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:38:19 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:38:19 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:43:03 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:43:03 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:43:03 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 5:56:57 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 5:56:58 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 5:56:58 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:17:28 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:17:29 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:17:29 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:42:44 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:42:45 PM bd.JDBC conectarBD
+GRAVE: Error al cargar los productos de la BD.
+ene 16, 2021 6:42:45 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:43:04 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:43:04 PM bd.JDBC conectarBD
+GRAVE: Error al cargar los productos de la BD.
+ene 16, 2021 6:43:04 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:44:03 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:44:03 PM bd.JDBC conectarBD
+GRAVE: Error al cargar los productos de la BD.
+ene 16, 2021 6:44:03 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:44:39 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:44:39 PM bd.JDBC conectarBD
+GRAVE: Error al cargar los productos de la BD.
+ene 16, 2021 6:44:39 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:45:34 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:45:34 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:45:34 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:45:49 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:45:49 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:45:49 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:46:28 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:46:28 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:46:28 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:46:59 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:46:59 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:46:59 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:48:12 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:48:13 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:48:13 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:48:17 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Tacones añadido a la cesta.
+ene 16, 2021 6:48:38 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 6:48:38 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 6:48:38 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 6:48:55 PM gui.IniciarSesion iniciar
+INFORMACIÓN: asierbrizu@opendeusto.es ha iniciado sesión.
+ene 16, 2021 7:11:03 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 7:11:04 PM bd.JDBC conectarBD
+GRAVE: Error al cargar los productos de la BD.
+ene 16, 2021 7:11:04 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 7:11:38 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 7:11:38 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 7:11:38 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado

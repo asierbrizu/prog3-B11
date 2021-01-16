@@ -1,24 +1,23 @@
 package clases;
 
+import java.sql.Timestamp;
 import java.util.*;
 
 public class Pedido {
 
-	public static int idActual = 1;
 	private int id;
 	private HashMap<Producto, Integer> productos;
-	private double importeBase;
 	private double importeTotal;
-	private Date fecha;
+	private Timestamp fecha;
+	private String correo;
 
-	public Pedido(HashMap<Producto, Integer> productos, double importeBase, double importeTotal) {
+	public Pedido(int id, HashMap<Producto, Integer> productos, double importeTotal, String correo, Timestamp fecha) {
 		super();
-		this.id = idActual;
-		idActual += 1;
+		this.id = id;
 		this.productos = productos;
-		this.importeBase = importeBase;
 		this.importeTotal = importeTotal;
-		this.fecha = null;
+		this.fecha = fecha;
+		this.correo = correo;
 	}
 
 	public int getId() {
@@ -33,14 +32,6 @@ public class Pedido {
 		this.productos = productos;
 	}
 
-	public double getImporteBase() {
-		return importeBase;
-	}
-
-	public void setImporteBase(double importeBase) {
-		this.importeBase = importeBase;
-	}
-
 	public double getImporteTotal() {
 		return importeTotal;
 	}
@@ -53,14 +44,21 @@ public class Pedido {
 		return fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(Timestamp fecha) {
 		this.fecha = fecha;
+	}
+
+	public String getCorreo() {
+		return correo;
+	}
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 
 	@Override
 	public String toString() {
-		return "Pedido [id=" + id + ", productos=" + productos + ", importeBase=" + importeBase + ", importeTotal="
-				+ importeTotal + ", fecha=" + fecha + "]";
+		return "Fecha: " + fecha + " | Importe total: " + importeTotal + "€";
 	}
 
 }

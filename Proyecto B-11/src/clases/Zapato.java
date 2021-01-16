@@ -42,4 +42,14 @@ public class Zapato extends Producto {
 		return "Zapato [numero=" + numero + ", tipoSuela=" + tipoSuela + ", tieneVelcro=" + tieneVelcro + "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Zapato) {
+			if (((Zapato) obj).getNombre().equals(this.getNombre()) && ((Zapato) obj).getNumero() == this.getNumero()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

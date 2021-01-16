@@ -10,6 +10,17 @@ public class Producto {
 	private String imagen;
 	private boolean estaDescatalogado;
 
+	public Producto() {
+		super();
+		this.id = 0;
+		this.nombre = "";
+		this.precio = 0.0;
+		this.descuento = 0.0;
+		this.color = "";
+		this.imagen = "";
+		this.estaDescatalogado = true;
+	}
+
 	public Producto(int id, String nombre, double precio, double descuento, String color, String imagen,
 			boolean estaDescatalogado) {
 		super();

@@ -1,29 +1,18 @@
 package gui;
 
-import java.awt.ComponentOrientation;
-
-import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.net.URL;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.logging.Level;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneLayout;
-
-import clases.CamisetaYPantalon;
 import clases.Producto;
 import main.CargarMas;
 import main.Inicio;
@@ -38,9 +27,9 @@ public class VentanaProductos extends JFrame {
 	public static JButton verMas;
 
 	public VentanaProductos(Set<Producto> productos) {
-		productoActual=hastaProducto=0;
+		productoActual = hastaProducto = 0;
 		if (Inicio.esVentanaDeseados) {
-			hastaProducto=productos.size();
+			hastaProducto = productos.size();
 		}
 		i = productos.iterator();
 		panelCatalogo.removeAll();
@@ -48,17 +37,24 @@ public class VentanaProductos extends JFrame {
 		setTitle("Ventana Productos");
 		scroll = new JScrollPane(panelCatalogo);
 		scroll.setLayout(new ScrollPaneLayout());
+		scroll.setBounds(0, 0, 800, 600);
+		scroll.setViewportView(panelCatalogo);
 		scroll.getVerticalScrollBar().setUnitIncrement(16);
-
-		panelCatalogo.setLayout(new GridLayout(0, 4));
+		try {
+			panelCatalogo.setLayout(new GridLayout(0, Integer.valueOf(Inicio.columnas)));
+		} catch (Exception e) {
+			panelCatalogo.setLayout(new GridLayout(0, 4));
+			Inicio.logger.log(Level.INFO,
+					"No se ha podido cargar la cantidad de columnas del fichero de configuración.");
+		}
 
 		verMas = new JButton("Ver mas.");
 
 		// Menú
 		JMenuBar barra = VentanaPrincipal.barra;
 		setJMenuBar(barra);
-		if(!Inicio.esVentanaDeseados) {
-		panelCatalogo.add(verMas);
+		if (!Inicio.esVentanaDeseados) {
+			panelCatalogo.add(verMas);
 		}
 		verMas.addActionListener(new ActionListener() {
 
@@ -71,6 +67,7 @@ public class VentanaProductos extends JFrame {
 
 		pack();
 		setVisible(true);
+		setSize(1600, 1200);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		add(scroll);
 
