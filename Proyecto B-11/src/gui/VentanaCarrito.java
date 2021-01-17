@@ -20,40 +20,40 @@ import java.util.Set;
 public class VentanaCarrito {
 
 	public static JDialog cesta;
+	public static double total = 0.0;
+	public static JButton tramitar;
 
 	public static void mostrarCesta() {
+		total = 0.0;
 		cesta = new JDialog(Inicio.ventana, "Carrito de la compra", true);
-		String[] columnNames = { "Nombre", "Precio", "Color", "Tamaño", "Caracteristicas", "Cantidad", "Borrar" };
-
-		Object[][] data = new Object[Inicio.mapaCesta.size()][7];
+		String[] columnNames = { "Nombre", "Precio", "Color", "Tamaño", "Caracteristicas", "Cantidad", "Subtotal",
+				"Borrar" };
+		Object[][] data = new Object[Inicio.mapaCesta.size()][8];
 		Set<Producto> claves = Inicio.mapaCesta.keySet();
 		int i = 0;
 		for (Producto p : claves) {
 			data[i][0] = p.getNombre();
 			data[i][1] = p.getPrecio() * p.getDescuento() + "€";
 			data[i][2] = p.getColor();
-
 			if (p instanceof CamisetaYPantalon) {
 				data[i][3] = ((CamisetaYPantalon) p).getTalla().toString();
 			} else if (p instanceof Zapato) {
 				data[i][3] = ((Zapato) p).getNumero();
 			}
-
 			if (p instanceof CamisetaYPantalon) {
 				data[i][4] = ((CamisetaYPantalon) p).getMaterial();
 			} else if (p instanceof Zapato) {
 				data[i][4] = ((Zapato) p).getTipoSuela();
 			}
-
 			data[i][5] = Inicio.mapaCesta.get(p);
-
-			data[i][6] = "Eliminar";
+			data[i][6] = p.getPrecio() * p.getDescuento() * Inicio.mapaCesta.get(p)+"€";
+			total += p.getPrecio() * p.getDescuento() * Inicio.mapaCesta.get(p);
+			data[i][7] = "Eliminar";
 			i++;
 		}
 
 		DefaultTableModel model = new DefaultTableModel(data, columnNames);
 		JTable table = new JTable(model);
-
 		JScrollPane scrollPane = new JScrollPane(table);
 
 		cesta.add(scrollPane, BorderLayout.CENTER);
@@ -67,6 +67,8 @@ public class VentanaCarrito {
 					if (p instanceof CamisetaYPantalon) {
 						if (p.getNombre().equals(model.getValueAt(modelRow, 0)) && ((CamisetaYPantalon) p).getTalla()
 								.toString().equals(model.getValueAt(modelRow, 3))) {
+							total -= p.getDescuento() * p.getPrecio() * Inicio.mapaCesta.get(p);
+							tramitar.setText("Guardar pedido. TOTAL: " + total + "€");
 							Inicio.mapaCesta.remove(p);
 							Inicio.logger.info(p.getNombre() + " eliminado del carrito.");
 							break;
@@ -74,6 +76,8 @@ public class VentanaCarrito {
 					} else if (p instanceof Zapato) {
 						if (p.getNombre().equals(model.getValueAt(modelRow, 0)) && String
 								.valueOf(((Zapato) p).getNumero()).equals(model.getValueAt(modelRow, 3).toString())) {
+							total -= p.getDescuento() * p.getPrecio() * Inicio.mapaCesta.get(p);
+							tramitar.setText("Guardar pedido. TOTAL: " + total + "€");
 							Inicio.mapaCesta.remove(p);
 							Inicio.logger.info(p.getNombre() + " eliminado del carrito.");
 							break;
@@ -89,9 +93,9 @@ public class VentanaCarrito {
 			}
 		};
 
-		ButtonColumn buttonColumn = new ButtonColumn(table, delete, 6);
+		ButtonColumn buttonColumn = new ButtonColumn(table, delete, 7);
 
-		JButton tramitar = new JButton("Guardar pedido");
+		tramitar = new JButton("Guardar pedido. TOTAL: " + total + "€");
 		tramitar.setEnabled(Inicio.usuarioIniciado != "");
 		tramitar.addActionListener(new ActionListener() {
 			@Override
@@ -101,11 +105,9 @@ public class VentanaCarrito {
 			}
 		});
 		cesta.add(tramitar, BorderLayout.SOUTH);
-
 		cesta.setSize(1000, 500);
 		cesta.setVisible(true);
 		cesta.setResizable(false);
-
 	}
 
 }

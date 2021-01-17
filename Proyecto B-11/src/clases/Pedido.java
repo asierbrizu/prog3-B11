@@ -1,6 +1,5 @@
 package clases;
 
-import java.sql.Timestamp;
 import java.util.*;
 
 public class Pedido {
@@ -8,10 +7,10 @@ public class Pedido {
 	private int id;
 	private HashMap<Producto, Integer> productos;
 	private double importeTotal;
-	private Timestamp fecha;
+	private String fecha;
 	private String correo;
 
-	public Pedido(int id, HashMap<Producto, Integer> productos, double importeTotal, String correo, Timestamp fecha) {
+	public Pedido(int id, HashMap<Producto, Integer> productos, double importeTotal, String correo, String fecha) {
 		super();
 		this.id = id;
 		this.productos = productos;
@@ -40,11 +39,11 @@ public class Pedido {
 		this.importeTotal = importeTotal;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Timestamp fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
 

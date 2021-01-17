@@ -1,10 +1,12 @@
 package bd;
 
 import java.io.BufferedWriter;
+
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
@@ -18,6 +20,7 @@ import clases.Zapato;
 import main.Inicio;
 
 public class JDBC {
+
 	public static void importar() {
 		try {
 			Class.forName("org.sqlite.JDBC");
@@ -29,12 +32,11 @@ public class JDBC {
 
 	public static void conectarBD() {
 		try {
-
 			Connection conn = DriverManager.getConnection(Inicio.database);
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM camiseta");
-			while (rs.next()) {
 
+			while (rs.next()) {
 				int id = rs.getInt("idProducto");
 				String nombre = rs.getString("nombre");
 				double precio = rs.getDouble("precio");
@@ -50,9 +52,10 @@ public class JDBC {
 				Inicio.camisetasYPantalones.add((CamisetaYPantalon) camiseta);
 				Inicio.mapaProducto.put(String.valueOf(rs.getInt("idProducto")), camiseta);
 			}
-			rs = stmt.executeQuery("SELECT * FROM zapatos");
-			while (rs.next()) {
 
+			rs = stmt.executeQuery("SELECT * FROM zapatos");
+
+			while (rs.next()) {
 				int id = rs.getInt("idProducto");
 				String nombre = rs.getString("nombre");
 				double precio = rs.getDouble("precio");
@@ -68,6 +71,7 @@ public class JDBC {
 				Inicio.zapatos.add((Zapato) zapato);
 				Inicio.mapaProducto.put(String.valueOf(rs.getInt("idProducto")), zapato);
 			}
+
 			Inicio.logger.info("Productos cargados.");
 			conn.close();
 		} catch (SQLException e) {
@@ -78,10 +82,10 @@ public class JDBC {
 	public static boolean comprobarUsuario(String correo) {
 		boolean existe = false;
 		try {
-
 			Connection conn = DriverManager.getConnection(Inicio.database);
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM usuario");
+
 			while (rs.next()) {
 				if (rs.getString("correo").equals(correo)) {
 					existe = true;
@@ -98,10 +102,10 @@ public class JDBC {
 	public static boolean comprobarContrasenya(String correo, String contrasenya) {
 		boolean coincide = false;
 		try {
-
 			Connection conn = DriverManager.getConnection(Inicio.database);
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM usuario");
+
 			while (rs.next()) {
 				if (rs.getString("correo").equals(correo) && rs.getString("contrasenya").equals(contrasenya)) {
 					coincide = true;
@@ -116,7 +120,6 @@ public class JDBC {
 	}
 
 	public static void crearUsuario(String usu, String contra) {
-
 		try {
 			Connection conn = DriverManager.getConnection(Inicio.database);
 			PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*) AS conteo FROM usuario WHERE correo=?;");
@@ -132,7 +135,6 @@ public class JDBC {
 				stmt.execute();
 				Usuario usuario = new Usuario(usu, contra);
 				Inicio.usuarios.add(usuario);
-
 			} else {
 				JOptionPane.showMessageDialog(Inicio.ventana, "Usuario ya existe", "El usuario ya existe",
 						JOptionPane.ERROR_MESSAGE);
@@ -142,7 +144,6 @@ public class JDBC {
 		} catch (SQLException e) {
 			Inicio.logger.severe("Error al crear el usuario " + usu + ".");
 		}
-
 	}
 
 	public static boolean loDesea(String usu, String id) {
@@ -152,6 +153,7 @@ public class JDBC {
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM deseados WHERE correo=?;");
 			stmt.setString(1, usu);
 			ResultSet rs = stmt.executeQuery();
+
 			while (rs.next()) {
 				if (rs.getString("idCamiseta") == null) {
 					if (rs.getString("idZapatos").equals(id)) {
@@ -163,6 +165,7 @@ public class JDBC {
 					}
 				}
 			}
+
 			conn.close();
 		} catch (SQLException e) {
 			Inicio.logger.severe("Error al determinar si el usuario " + usu + " tiene el producto ID:" + id
@@ -178,13 +181,10 @@ public class JDBC {
 			if (Inicio.mapaProducto.get(id) instanceof CamisetaYPantalon) {
 				stmt.setString(1, id);
 				stmt.setString(3, usu);
-
 			} else {
 				stmt.setString(2, id);
 				stmt.setString(3, usu);
-
 			}
-
 			stmt.execute();
 			Inicio.logger.info("Producto ID:" + id + " añadida a la lista de deseados de " + usu + ".");
 			conn.close();
@@ -197,13 +197,10 @@ public class JDBC {
 		try {
 			Connection conn = DriverManager.getConnection(Inicio.database);
 			PreparedStatement stmt;
-
 			if (Inicio.mapaProducto.get(id) instanceof CamisetaYPantalon) {
 				stmt = conn.prepareStatement("DELETE FROM deseados WHERE correo=? AND idCamiseta=?");
-
 			} else {
 				stmt = conn.prepareStatement("DELETE FROM deseados WHERE correo=? AND idZapatos=?");
-
 			}
 			stmt.setString(1, usu);
 			stmt.setString(2, id);
@@ -222,6 +219,7 @@ public class JDBC {
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM deseados WHERE correo=?;");
 			stmt.setString(1, usuario);
 			ResultSet rs = stmt.executeQuery();
+
 			while (rs.next()) {
 				if (rs.getString("idCamiseta") == null) {
 					productos.add(Inicio.mapaProducto.get(String.valueOf(rs.getInt("idZapatos"))));
@@ -229,6 +227,7 @@ public class JDBC {
 					productos.add(Inicio.mapaProducto.get(String.valueOf(rs.getInt("idCamiseta"))));
 				}
 			}
+
 			conn.close();
 		} catch (SQLException e) {
 			Inicio.logger.severe("Error al obtener la lista de productos deseados de " + usuario + ".");
@@ -239,28 +238,33 @@ public class JDBC {
 	public static void tramitarPedido() {
 		Connection conn;
 		try {
-
 			double importeTotal = 0.0;
 			Set<Producto> claves = Inicio.mapaCesta.keySet();
+
 			for (Producto producto : claves) {
 				importeTotal += producto.getPrecio() * producto.getDescuento() * Inicio.mapaCesta.get(producto);
 			}
+
 			conn = DriverManager.getConnection(Inicio.database);
 			Statement stmt;
 			PreparedStatement pstmt;
 			stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT id FROM pedido;");
 			int maximo = 0;
+
 			while (rs.next()) {
 				if (maximo < rs.getInt("id")) {
 					maximo = rs.getInt("id");
 				}
 			}
+
 			int id = 1 + maximo;
-			pstmt = conn.prepareStatement("INSERT INTO pedido VALUES(?,?,CURRENT_TIMESTAMP,?);");
+			pstmt = conn.prepareStatement("INSERT INTO pedido VALUES(?,?,?,?);");
 			pstmt.setInt(1, id);
 			pstmt.setDouble(2, importeTotal);
-			pstmt.setString(3, Inicio.usuarioIniciado);
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			pstmt.setString(3, df.format(new Timestamp(System.currentTimeMillis())));
+			pstmt.setString(4, Inicio.usuarioIniciado);
 			pstmt.execute();
 			BufferedWriter buffWriter = new BufferedWriter(new FileWriter(Inicio.pedidos + "_" + id + ".txt"));
 			buffWriter.write("ID Pedido:" + id + " | Importe total: " + importeTotal + " | Usuario: "
@@ -272,7 +276,6 @@ public class JDBC {
 			buffWriter.newLine();
 
 			for (Producto producto : claves) {
-
 				pstmt = conn.prepareStatement("INSERT INTO productospedido VALUES(?,?,?,?,?,?)");
 				if (producto instanceof CamisetaYPantalon) {
 					buffWriter.write(
@@ -291,6 +294,7 @@ public class JDBC {
 				pstmt.execute();
 				buffWriter.newLine();
 			}
+
 			Inicio.mapaCesta.clear();
 			Inicio.logger.info("Pedido " + id + " tramitado.");
 			buffWriter.close();
@@ -302,7 +306,6 @@ public class JDBC {
 		} catch (IOException e) {
 			Inicio.logger.severe("Hay problemas al escribir.");
 		}
-
 	}
 
 	public static ArrayList<Pedido> obtenerPedidos(String correo) {
@@ -312,11 +315,11 @@ public class JDBC {
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM pedido WHERE correo=?;");
 			stmt.setString(1, correo);
 			ResultSet rs = stmt.executeQuery();
+
 			while (rs.next()) {
 				PreparedStatement productosPedido = conn
 						.prepareStatement("SELECT * FROM productospedido WHERE idPe=?;");
 				productosPedido.setString(1, rs.getString("id"));
-
 				ResultSet productos = productosPedido.executeQuery();
 				HashMap<Producto, Integer> mapaProductos = new HashMap<Producto, Integer>();
 				while (productos.next()) {
@@ -331,13 +334,12 @@ public class JDBC {
 					}
 				}
 				pedidos.add(new Pedido(Integer.valueOf(rs.getString("id")), mapaProductos, rs.getDouble("importeTotal"),
-						correo, Timestamp.valueOf(rs.getString("fecha"))));
+						correo, rs.getString("fecha")));
 			}
 
 		} catch (SQLException e) {
 			Inicio.logger.severe("Error al obtener los pedidos de " + correo + ".");
 		}
-
 		return pedidos;
 	}
 
@@ -346,11 +348,13 @@ public class JDBC {
 			Connection conn = DriverManager.getConnection(Inicio.database);
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM pedido");
+
 			while (rs.next()) {
 				if (rs.getString("correo").equals(usu)) {
 					return true;
 				}
 			}
+
 			conn.close();
 		} catch (SQLException e) {
 			Inicio.logger.severe("Error al intentar determinar si el usuario " + usu + " ha realizado algun pedido.");
@@ -396,5 +400,4 @@ public class JDBC {
 		}
 		return prod;
 	}
-
 }

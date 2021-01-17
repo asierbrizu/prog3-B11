@@ -23,12 +23,9 @@ public class PedidoTest {
 
 	@Before
 	public void setUp() {
-		pedido1 = new Pedido(1, new HashMap<Producto, Integer>(), 12.0, "correo1",
-				new Timestamp(System.currentTimeMillis()));
-		pedido2 = new Pedido(2, new HashMap<Producto, Integer>(), 20, "correo2",
-				new Timestamp(System.currentTimeMillis()));
-		pedido3 = new Pedido(3, new HashMap<Producto, Integer>(), 8, "correo3",
-				new Timestamp(System.currentTimeMillis()));
+		pedido1 = new Pedido(1, new HashMap<Producto, Integer>(), 12.0, "correo1", "");
+		pedido2 = new Pedido(2, new HashMap<Producto, Integer>(), 20, "correo2", "");
+		pedido3 = new Pedido(3, new HashMap<Producto, Integer>(), 8, "correo3", "");
 
 		producto1 = new CamisetaYPantalon(1, "Camiseta Adidas", 25.0, 1.0, "Negro", "img/camiAdidas", false, Talla.L,
 				"Poliester", true);
@@ -73,9 +70,9 @@ public class PedidoTest {
 
 	@Test
 	public void testFecha() {
-		Timestamp t1 = new Timestamp(System.currentTimeMillis());
-		Timestamp t2 = new Timestamp(System.currentTimeMillis());
-		Timestamp t3 = new Timestamp(System.currentTimeMillis());
+		String t1 = "";
+		String t2 = "";
+		String t3 = "";
 		pedido1.setFecha(t1);
 		pedido2.setFecha(t2);
 		pedido3.setFecha(t3);

@@ -596,3 +596,411 @@ ene 16, 2021 7:11:38 PM bd.JDBC conectarBD
 INFORMACIÓN: Productos cargados.
 ene 16, 2021 7:11:38 PM main.Inicio$1 run
 INFORMACIÓN: Programa iniciado
+ene 16, 2021 7:54:54 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 7:54:55 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 7:54:55 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 7:55:19 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 7:55:38 PM bd.JDBC crearUsuario
+INFORMACIÓN: Usuario a creado.
+ene 16, 2021 7:55:41 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 7:55:44 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 8 tramitado.
+ene 16, 2021 7:55:47 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 16, 2021 7:55:49 PM bd.JDBC anyadirDeseado
+INFORMACIÓN: Producto ID:13 añadida a la lista de deseados de a.
+ene 16, 2021 7:55:56 PM bd.JDBC eliminarDeseados
+INFORMACIÓN: Producto ID:13 eliminado de la lista de deseados de a.
+ene 16, 2021 7:56:04 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 7:56:04 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 7:56:04 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 10:47:51 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 10:47:51 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 10:47:51 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 10:47:55 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 10:50:08 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 10:50:08 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 10:50:08 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 10:50:14 PM bd.JDBC crearUsuario
+INFORMACIÓN: Usuario a creado.
+ene 16, 2021 10:50:19 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 10:50:29 PM bd.JDBC anyadirDeseado
+INFORMACIÓN: Producto ID:13 añadida a la lista de deseados de a.
+ene 16, 2021 10:50:30 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 16, 2021 10:50:33 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 10:50:37 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 9 tramitado.
+ene 16, 2021 10:53:19 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 10:53:19 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 10:53:19 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 10:56:35 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 10:56:35 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 10:56:35 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 10:57:18 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 10:57:19 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 10:57:19 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 10:59:53 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 10:59:57 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 11:00:01 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 16, 2021 11:00:10 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Pantalones de campana añadido a la cesta.
+ene 16, 2021 11:00:18 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 11:00:21 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 10 tramitado.
+ene 16, 2021 11:06:59 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:07:00 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:07:00 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:07:03 PM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 16, 2021 11:07:05 PM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 16, 2021 11:07:08 PM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 11 tramitado.
+ene 16, 2021 11:48:27 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:48:27 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:48:27 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:48:35 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 11:48:43 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 11:49:36 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:49:37 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:49:37 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:49:45 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 11:49:53 PM main.CambiarImagen run
+GRAVE: Error al cambiar la imagen de la pagina principal.
+ene 16, 2021 11:50:10 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:50:11 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:50:11 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:52:51 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:52:51 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:52:51 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:53:16 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:53:16 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:53:16 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:54:21 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:54:21 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:54:21 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:54:54 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:54:54 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:54:55 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:56:59 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:56:59 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:56:59 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:57:25 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:57:25 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:57:25 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 16, 2021 11:58:03 PM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 16, 2021 11:58:03 PM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 16, 2021 11:58:03 PM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:02:35 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:02:35 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:02:35 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:09:27 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:09:28 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:09:28 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:09:36 AM gui.IniciarSesion iniciar
+INFORMACIÓN: uwu ha iniciado sesión.
+ene 17, 2021 12:09:40 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 12:09:42 AM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 14 tramitado.
+ene 17, 2021 12:14:45 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:14:45 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:14:45 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:14:48 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Graduador en Deusto añadido a la cesta.
+ene 17, 2021 12:14:56 AM gui.IniciarSesion iniciar
+INFORMACIÓN: uwu ha iniciado sesión.
+ene 17, 2021 12:15:02 AM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 15 tramitado.
+ene 17, 2021 12:20:48 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:20:48 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:20:48 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:20:53 AM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 17, 2021 12:22:08 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:22:08 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:22:08 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:22:12 AM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 17, 2021 12:22:14 AM bd.JDBC obtenerPedidos
+GRAVE: Error al obtener los pedidos de a.
+ene 17, 2021 12:26:36 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:26:36 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:26:36 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:26:45 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:26:45 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:26:45 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:26:49 AM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 17, 2021 12:26:59 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:27:00 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:27:00 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:27:05 AM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 17, 2021 12:27:09 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 12:27:11 AM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 16 tramitado.
+ene 17, 2021 12:28:03 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:28:03 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:28:03 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:28:50 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 12:28:51 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 12:28:51 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 12:29:04 AM bd.JDBC crearUsuario
+INFORMACIÓN: Usuario a creado.
+ene 17, 2021 12:29:06 AM gui.IniciarSesion iniciar
+INFORMACIÓN: a ha iniciado sesión.
+ene 17, 2021 12:29:11 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 12:29:13 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 12:29:15 AM bd.JDBC tramitarPedido
+INFORMACIÓN: Pedido 8 tramitado.
+ene 17, 2021 2:07:10 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:07:10 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:07:10 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:14:25 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:14:25 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:14:25 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:15:38 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:15:39 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:15:39 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:15:57 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:15:58 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:15:58 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:16:35 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 2:24:29 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:24:29 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:24:29 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:24:35 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 2:24:36 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 17, 2021 2:24:39 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatos añadido a la cesta.
+ene 17, 2021 2:28:18 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:28:18 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:28:18 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:28:32 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 2:45:48 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:45:48 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:45:48 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:45:53 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 17, 2021 2:45:54 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 2:45:55 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 2:46:04 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Zapatillas marrones eliminado del carrito.
+ene 17, 2021 2:46:06 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Deportivas rosas eliminado del carrito.
+ene 17, 2021 2:48:57 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Botas eliminado del carrito.
+ene 17, 2021 2:49:00 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 2:49:08 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Tacones añadido a la cesta.
+ene 17, 2021 2:49:36 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 2:49:37 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatos añadido a la cesta.
+ene 17, 2021 2:51:41 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 2:51:41 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 2:51:41 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 2:51:47 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 17, 2021 2:51:49 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 2:51:50 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 2:51:52 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Tacones añadido a la cesta.
+ene 17, 2021 2:52:50 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Tacones eliminado del carrito.
+ene 17, 2021 2:52:52 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Botas eliminado del carrito.
+ene 17, 2021 2:52:53 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Deportivas rosas eliminado del carrito.
+ene 17, 2021 2:53:01 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Zapatillas marrones eliminado del carrito.
+ene 17, 2021 2:53:05 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Botas añadido a la cesta.
+ene 17, 2021 2:53:06 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Deportivas rosas añadido a la cesta.
+ene 17, 2021 2:53:07 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Zapatillas marrones añadido a la cesta.
+ene 17, 2021 2:53:08 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Tacones añadido a la cesta.
+ene 17, 2021 3:11:09 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 3:11:09 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 3:11:09 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 3:11:13 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Por que gafas? añadido a la cesta.
+ene 17, 2021 3:11:16 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Pantalones de campana añadido a la cesta.
+ene 17, 2021 3:11:20 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Pantalones de campana añadido a la cesta.
+ene 17, 2021 3:11:21 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Por que gafas? añadido a la cesta.
+ene 17, 2021 3:11:24 AM gui.Seleccionar$2 actionPerformed
+INFORMACIÓN: Pantalones vaqueros añadido a la cesta.
+ene 17, 2021 3:11:54 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Por que gafas? eliminado del carrito.
+ene 17, 2021 3:12:02 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Pantalones de campana eliminado del carrito.
+ene 17, 2021 3:12:04 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Pantalones vaqueros eliminado del carrito.
+ene 17, 2021 3:12:06 AM gui.VentanaCarrito$1 actionPerformed
+INFORMACIÓN: Pantalones de campana eliminado del carrito.
+ene 17, 2021 3:12:46 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 3:12:46 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 3:12:46 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 3:13:43 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 3:13:43 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 3:13:43 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 3:14:00 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 3:14:00 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 3:14:00 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado
+ene 17, 2021 3:21:36 AM bd.JDBC importar
+INFORMACIÓN: JDBC cargado.
+ene 17, 2021 3:21:36 AM bd.JDBC conectarBD
+INFORMACIÓN: Productos cargados.
+ene 17, 2021 3:21:36 AM main.Inicio$1 run
+INFORMACIÓN: Programa iniciado

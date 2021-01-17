@@ -1,7 +1,7 @@
 package main;
 
 import java.awt.Image;
-
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
@@ -61,7 +61,7 @@ public class CambiarImagen extends Thread {
 
 				URL icono = Inicio.ventana.getClass().getResource(ruta);
 				Image img = new ImageIcon(icono).getImage();
-				Image resizedImage = img.getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH);
+				Image resizedImage = img.getScaledInstance((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth()*4/10, (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight()*4/10, java.awt.Image.SCALE_SMOOTH);
 				VentanaPrincipal.bProd = new JButton(new ImageIcon(resizedImage));
 				VentanaPrincipal.bProd.setName(String.valueOf(productos.get(actual).getId()));
 				VentanaPrincipal.bProd.addActionListener(new ActionListener() {

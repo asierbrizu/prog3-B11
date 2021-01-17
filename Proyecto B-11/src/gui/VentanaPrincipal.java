@@ -36,8 +36,11 @@ public class VentanaPrincipal extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Ventana Principal");
 		setLayout(new GridLayout(2, 1));
-		transicion = new CambiarImagen();
-		transicion.start();
+		if (!transicion.isAlive()) {
+			transicion = new CambiarImagen();
+			transicion.start();
+		}
+
 		if (registrarse.getActionListeners().length == 0) {
 			registrarse.addActionListener(new ActionListener() {
 				@Override
@@ -182,19 +185,22 @@ public class VentanaPrincipal extends JFrame {
 
 		icono = VentanaPrincipal.class.getResource(Inicio.imagenes + "img/anciano.png");
 		img = new ImageIcon(icono).getImage();
-		resizedImage = img.getScaledInstance(400, 400, java.awt.Image.SCALE_SMOOTH);
+		resizedImage = img.getScaledInstance((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() * 35 / 100,
+				(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() * 4 / 10, java.awt.Image.SCALE_SMOOTH);
 		bProd = new JButton(new ImageIcon(resizedImage));
 		bProd.setName("1");
 
 		icono = VentanaPrincipal.class.getResource(Inicio.imagenes + "img/camisetas.png");
 		img = new ImageIcon(icono).getImage();
-		resizedImage = img.getScaledInstance(550, 350, java.awt.Image.SCALE_SMOOTH);
+		resizedImage = img.getScaledInstance((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() * 35 / 100,
+				(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() * 4 / 10, java.awt.Image.SCALE_SMOOTH);
 		JButton bCamiseta = new JButton(new ImageIcon(resizedImage));
 		bCamiseta = new JButton(new ImageIcon(resizedImage));
 
 		icono = VentanaPrincipal.class.getResource(Inicio.imagenes + "img/zapatos.png");
 		img = new ImageIcon(icono).getImage();
-		resizedImage = img.getScaledInstance(550, 350, java.awt.Image.SCALE_SMOOTH);
+		resizedImage = img.getScaledInstance((int) Toolkit.getDefaultToolkit().getScreenSize().getWidth() * 35 / 100,
+				(int) Toolkit.getDefaultToolkit().getScreenSize().getHeight() * 4 / 10, java.awt.Image.SCALE_SMOOTH);
 		JButton bZapato = new JButton(new ImageIcon(resizedImage));
 		bZapato = new JButton(new ImageIcon(resizedImage));
 

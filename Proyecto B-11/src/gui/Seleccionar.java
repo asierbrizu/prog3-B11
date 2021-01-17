@@ -28,16 +28,15 @@ import clases.Zapato;
 import main.Inicio;
 
 public class Seleccionar {
+	
 	static JDialog seleccion;
 	static boolean desea;
 
 	public static void mostrar(String usuario, Producto producto) {
 		desea = JDBC.loDesea(usuario, String.valueOf(producto.getId()));
-
 		seleccion = new JDialog(Inicio.ventana, producto.getNombre(), true);
 		seleccion.setLayout(new BorderLayout());
 		JPanel info = new JPanel(new GridLayout(0, 2));
-
 		URL icono = Inicio.ventana.getClass().getResource(Inicio.imagenes + producto.getImagen());
 		Image img = new ImageIcon(icono).getImage();
 		Image resizedImage = img.getScaledInstance(220, 220, java.awt.Image.SCALE_SMOOTH);
@@ -177,9 +176,9 @@ public class Seleccionar {
 		botones.add(bConfirmar);
 		seleccion.add(botones, BorderLayout.SOUTH);
 		seleccion.setSize(530, 300);
-		seleccion.setVisible(true);
+		
 		seleccion.setResizable(false);
-
+		seleccion.setVisible(true);
 	}
 
 }
